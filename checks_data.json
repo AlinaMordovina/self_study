@@ -1,0 +1,170 @@
+[
+  {
+    "model": "checks.question",
+    "pk": 1,
+    "fields": {
+      "material": 1,
+      "question": "Что вам понадобится для работы с будущими материалами?",
+      "answer_right": "Python, PyCharm, Google",
+      "answer_wrong_1": "Google",
+      "answer_wrong_2": "Что-то",
+      "answer_wrong_3": "Ничего"
+    }
+  },
+  {
+    "model": "checks.question",
+    "pk": 2,
+    "fields": {
+      "material": 2,
+      "question": "Какую функцию использовать для сортировки?",
+      "answer_right": "sorted()",
+      "answer_wrong_1": "sor()",
+      "answer_wrong_2": "sorted",
+      "answer_wrong_3": "я не умею сортировать"
+    }
+  },
+  {
+    "model": "checks.question",
+    "pk": 3,
+    "fields": {
+      "material": 11,
+      "question": "Что такое магический метод __str__?",
+      "answer_right": "Метод  __str__  определяет информацию, которая выводится по объекту для пользователя.",
+      "answer_wrong_1": "Метод  __str__  определяет, какая отладочная информация будет выводиться, когда объект набран в консоли.",
+      "answer_wrong_2": "Метод  __str__  ничего не определяет.",
+      "answer_wrong_3": "Что это вообще?"
+    }
+  },
+  {
+    "model": "checks.log",
+    "pk": 1,
+    "fields": {
+      "created_at": "2024-06-24T13:38:24.992Z",
+      "user": 1,
+      "question": 2,
+      "answer": "sorted()",
+      "is_right": false
+    }
+  },
+  {
+    "model": "checks.log",
+    "pk": 2,
+    "fields": {
+      "created_at": "2024-06-24T13:40:08.779Z",
+      "user": 1,
+      "question": 2,
+      "answer": "sorted()",
+      "is_right": false
+    }
+  },
+  {
+    "model": "checks.log",
+    "pk": 3,
+    "fields": {
+      "created_at": "2024-06-24T13:40:47.319Z",
+      "user": 1,
+      "question": 3,
+      "answer": "Метод  __str__  определяет информацию, которая выводится по объекту для пользователя.",
+      "is_right": false
+    }
+  },
+  {
+    "model": "checks.log",
+    "pk": 4,
+    "fields": {
+      "created_at": "2024-06-24T13:42:10.182Z",
+      "user": 1,
+      "question": 3,
+      "answer": "Метод  __str__  определяет информацию, которая выводится по объекту для пользователя.",
+      "is_right": false
+    }
+  },
+  {
+    "model": "checks.log",
+    "pk": 5,
+    "fields": {
+      "created_at": "2024-06-24T13:49:11.077Z",
+      "user": 1,
+      "question": 3,
+      "answer": "Метод  __str__  определяет информацию, которая выводится по объекту для пользователя.",
+      "is_right": false
+    }
+  },
+  {
+    "model": "checks.log",
+    "pk": 6,
+    "fields": {
+      "created_at": "2024-06-24T13:50:56.136Z",
+      "user": 1,
+      "question": 3,
+      "answer": "Метод  __str__  определяет информацию, которая выводится по объекту для пользователя.",
+      "is_right": false
+    }
+  },
+  {
+    "model": "checks.log",
+    "pk": 7,
+    "fields": {
+      "created_at": "2024-06-24T13:51:09.884Z",
+      "user": 1,
+      "question": 3,
+      "answer": "Метод  __str__  определяет информацию, которая выводится по объекту для пользователя.",
+      "is_right": false
+    }
+  },
+  {
+    "model": "checks.log",
+    "pk": 8,
+    "fields": {
+      "created_at": "2024-06-24T13:53:05.029Z",
+      "user": 1,
+      "question": 3,
+      "answer": "Метод  __str__  определяет информацию, которая выводится по объекту для пользователя.",
+      "is_right": true
+    }
+  },
+  {
+    "model": "checks.log",
+    "pk": 9,
+    "fields": {
+      "created_at": "2024-06-24T13:53:39.129Z",
+      "user": 1,
+      "question": 3,
+      "answer": "Метод  __str__  определяет информацию, которая выводится по объекту для пользователя.",
+      "is_right": true
+    }
+  },
+  {
+    "model": "checks.log",
+    "pk": 10,
+    "fields": {
+      "created_at": "2024-06-24T13:54:07.287Z",
+      "user": 1,
+      "question": 3,
+      "answer": "етод  __str__  определяет информацию, которая выводится по объекту для пользователя.",
+      "is_right": false
+    }
+  },
+  {
+    "model": "checks.log",
+    "pk": 11,
+    "fields": {
+      "created_at": "2024-06-24T13:54:15.135Z",
+      "user": 1,
+      "question": 3,
+      "answer": "Метод  __str__  определяет информацию, которая выводится по объекту для пользователя.",
+      "is_right": true
+    }
+  },
+  {
+    "model": "checks.log",
+    "pk": 12,
+    "fields": {
+      "created_at": "2024-06-24T13:56:32.884Z",
+      "user": 1,
+      "question": 2,
+      "answer": "sorted()",
+      "is_right": true
+    }
+  }
+]

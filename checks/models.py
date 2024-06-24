@@ -8,7 +8,7 @@ class Question(models.Model):
     material = models.ForeignKey(
         Material,
         on_delete=models.CASCADE,
-        verbose_name='Материал',
+        verbose_name="Материал",
     )
 
     question = models.CharField(
@@ -17,22 +17,22 @@ class Question(models.Model):
     )
 
     answer_right = models.CharField(
-        max_length=50,
+        max_length=255,
         verbose_name="Правильный ответ",
     )
 
     answer_wrong_1 = models.CharField(
-        max_length=50,
+        max_length=255,
         verbose_name="Неправильный ответ 1",
     )
 
     answer_wrong_2 = models.CharField(
-        max_length=50,
+        max_length=255,
         verbose_name="Неправильный ответ 2",
     )
 
     answer_wrong_3 = models.CharField(
-        max_length=50,
+        max_length=255,
         verbose_name="Неправильный ответ 3",
     )
 
@@ -44,18 +44,15 @@ class Question(models.Model):
         verbose_name_plural = "Вопросы"
 
 
-class Answer(models.Model):
-    owner = models.ForeignKey(
+class Log(models.Model):
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name="Дата")
+
+    user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         blank=True,
         null=True,
         on_delete=models.SET_NULL,
         verbose_name="Пользователь",
-    )
-
-    answer = models.CharField(
-        max_length=50,
-        verbose_name="Ответ",
     )
 
     question = models.ForeignKey(
@@ -67,11 +64,16 @@ class Answer(models.Model):
         verbose_name="Вопрос",
     )
 
-    is_right = models.BooleanField(default=False, verbose_name='Правильный ответ')
+    answer = models.CharField(
+        max_length=255,
+        verbose_name="Ответ",
+    )
+
+    is_right = models.BooleanField(default=False, verbose_name="Правильный ответ")
 
     def __str__(self):
         return f"{self.answer}"
 
     class Meta:
-        verbose_name = "Ответ"
-        verbose_name_plural = "Ответы"
+        verbose_name = "Лог ответов"
+        verbose_name_plural = "Логи ответов"

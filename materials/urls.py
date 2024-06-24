@@ -3,20 +3,22 @@ from django.conf.urls.static import static
 from django.urls import path
 
 from materials.apps import MaterialsConfig
-from rest_framework.routers import DefaultRouter
-
-from materials.views import SectionViewSet, MaterialCreateAPIView, MaterialListAPIView, MaterialRetrieveAPIView, \
-    MaterialUpdateAPIView, MaterialDestroyAPIView
+from materials.views import (MaterialListAPIView, MaterialRetrieveAPIView,
+                             SectionListAPIView, SectionRetrieveAPIView)
 
 app_name = MaterialsConfig.name
 
-router = DefaultRouter()
-router.register(r'sections', SectionViewSet, basename='sections')
-
 urlpatterns = [
-    path('material/create/', MaterialCreateAPIView.as_view(), name="material_create"),
-    path('material/', MaterialListAPIView.as_view(), name="material_list"),
-    path("material/<int:pk>/", MaterialRetrieveAPIView.as_view(), name="material_detail"),
-    path("material/<int:pk>/update/", MaterialUpdateAPIView.as_view(), name="material_update"),
-    path("material/<int:pk>/delete/", MaterialDestroyAPIView.as_view(), name="material_delete"),
-] + router.urls + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path("sections/", SectionListAPIView.as_view(), name="section_list"),
+    path(
+        "sections/<int:pk>/",
+        SectionRetrieveAPIView.as_view(),
+        name="section_detail",
+    ),
+    path("materials/", MaterialListAPIView.as_view(), name="material_list"),
+    path(
+        "materials/<int:pk>/",
+        MaterialRetrieveAPIView.as_view(),
+        name="material_detail",
+    ),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

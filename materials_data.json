@@ -1,0 +1,168 @@
+[
+  {
+    "model": "materials.section",
+    "pk": 1,
+    "fields": {
+      "title": "Погружение в профессию",
+      "picture": "",
+      "description": "Установка необходимых компонентов для изучения материалов раздела."
+    }
+  },
+  {
+    "model": "materials.section",
+    "pk": 2,
+    "fields": {
+      "title": "Введение в программирование",
+      "picture": "",
+      "description": "Основы алгоритмизации и синтаксиса."
+    }
+  },
+  {
+    "model": "materials.section",
+    "pk": 3,
+    "fields": {
+      "title": "Основы программирования",
+      "picture": "",
+      "description": "Коллекции, вложенность, основы абстракций и объектов."
+    }
+  },
+  {
+    "model": "materials.section",
+    "pk": 4,
+    "fields": {
+      "title": "ООП",
+      "picture": "",
+      "description": "Введение, режимы доступа, магические методы, наследования, исключения."
+    }
+  },
+  {
+    "model": "materials.material",
+    "pk": 1,
+    "fields": {
+      "title": "Установка необходимого",
+      "picture": "",
+      "description": "Браузер, VPN, Zoom",
+      "section": 1
+    }
+  },
+  {
+    "model": "materials.material",
+    "pk": 2,
+    "fields": {
+      "title": "Знакомство с Python",
+      "picture": "",
+      "description": "Кто такой Python разработчик.",
+      "section": 1
+    }
+  },
+  {
+    "model": "materials.material",
+    "pk": 3,
+    "fields": {
+      "title": "Основы алгоритмизации",
+      "picture": "",
+      "description": "",
+      "section": 2
+    }
+  },
+  {
+    "model": "materials.material",
+    "pk": 4,
+    "fields": {
+      "title": "Основы синтаксиса",
+      "picture": "",
+      "description": "",
+      "section": 2
+    }
+  },
+  {
+    "model": "materials.material",
+    "pk": 5,
+    "fields": {
+      "title": "Списки и циклы",
+      "picture": "",
+      "description": "",
+      "section": 2
+    }
+  },
+  {
+    "model": "materials.material",
+    "pk": 6,
+    "fields": {
+      "title": "Строки и словари",
+      "picture": "",
+      "description": "",
+      "section": 2
+    }
+  },
+  {
+    "model": "materials.material",
+    "pk": 7,
+    "fields": {
+      "title": "Коллекции и вложенность",
+      "picture": "",
+      "description": "",
+      "section": 3
+    }
+  },
+  {
+    "model": "materials.material",
+    "pk": 8,
+    "fields": {
+      "title": "Основы абстракций и объектов",
+      "picture": "",
+      "description": "",
+      "section": 3
+    }
+  },
+  {
+    "model": "materials.material",
+    "pk": 9,
+    "fields": {
+      "title": "Введение в ООП",
+      "picture": "",
+      "description": "",
+      "section": 4
+    }
+  },
+  {
+    "model": "materials.material",
+    "pk": 10,
+    "fields": {
+      "title": "Режимы доступа",
+      "picture": "",
+      "description": "",
+      "section": 4
+    }
+  },
+  {
+    "model": "materials.material",
+    "pk": 11,
+    "fields": {
+      "title": "Магические методы",
+      "picture": "",
+      "description": "",
+      "section": 4
+    }
+  },
+  {
+    "model": "materials.material",
+    "pk": 12,
+    "fields": {
+      "title": "Наследования",
+      "picture": "",
+      "description": "",
+      "section": 4
+    }
+  },
+  {
+    "model": "materials.material",
+    "pk": 13,
+    "fields": {
+      "title": "Исключения",
+      "picture": "",
+      "description": "",
+      "section": 4
+    }
+  }
+]
