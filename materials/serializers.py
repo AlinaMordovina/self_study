@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from materials.models import Section, Material
+from materials.models import Material, Section
 
 
 class MaterialSerializer(serializers.ModelSerializer):
@@ -11,7 +11,14 @@ class MaterialSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Material
-        fields = ['id', 'title', 'picture', 'description', 'section', "section_title",]
+        fields = [
+            "id",
+            "title",
+            "picture",
+            "description",
+            "section",
+            "section_title",
+        ]
 
 
 class SectionSerializer(serializers.ModelSerializer):
@@ -26,4 +33,11 @@ class SectionSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Section
-        fields = ['id', 'title', 'picture', 'description', 'materials_count', "materials",]
+        fields = [
+            "id",
+            "title",
+            "picture",
+            "description",
+            "materials_count",
+            "materials",
+        ]
