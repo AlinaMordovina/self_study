@@ -4,10 +4,14 @@ from materials.models import Section, Material
 
 
 class MaterialSerializer(serializers.ModelSerializer):
+    section_title = serializers.SerializerMethodField()
+
+    def get_section_title(self, material):
+        return material.section.title
 
     class Meta:
         model = Material
-        fields = "__all__"
+        fields = ['id', 'title', 'picture', 'description', 'section', "section_title",]
 
 
 class SectionSerializer(serializers.ModelSerializer):

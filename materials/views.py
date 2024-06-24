@@ -1,16 +1,15 @@
 from rest_framework import viewsets, generics
-from rest_framework.generics import get_object_or_404
-from rest_framework.permissions import IsAuthenticated
-from rest_framework.response import Response
-from rest_framework.views import APIView
+import django_filters.rest_framework
 
 from materials.models import Section, Material
+from materials.pagination import MaterialsPagination
 from materials.serializers import SectionSerializer, MaterialSerializer
 
 
 class SectionViewSet(viewsets.ModelViewSet):
     serializer_class = SectionSerializer
-    queryset = Section.objects.all()
+    queryset = Section.objects.all().order_by('pk')
+    pagination_class = MaterialsPagination
 
 
 class MaterialCreateAPIView(generics.CreateAPIView):
@@ -20,7 +19,10 @@ class MaterialCreateAPIView(generics.CreateAPIView):
 
 class MaterialListAPIView(generics.ListAPIView):
     serializer_class = MaterialSerializer
-    queryset = Material.objects.all()
+    queryset = Material.objects.all().order_by('pk')
+    pagination_class = MaterialsPagination
+    filter_backends = [django_filters.rest_framework.DjangoFilterBackend]
+    filterset_fields = ['section',]
 
 
 class MaterialRetrieveAPIView(generics.RetrieveAPIView):
